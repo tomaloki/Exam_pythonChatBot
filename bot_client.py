@@ -64,7 +64,7 @@ client.connect((HOST, int(PORT)))
 def receive():
     while True:
         # Receive message from server
-        # For received "USER"-request, send the usernambe in return
+        # For received "USER"-request, send the username in return
         message = client.recv(1024).decode('utf-8')
         try:
             if message == 'USER':
