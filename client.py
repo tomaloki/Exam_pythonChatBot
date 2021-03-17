@@ -77,7 +77,7 @@ def write():
             client.send(message)
 
 
-# Starting threads for listening and writing
+# Threads for receiving and wiritng messages to the server
 receive_thread = threading.Thread(target=receive)
 receive_thread.start()
 

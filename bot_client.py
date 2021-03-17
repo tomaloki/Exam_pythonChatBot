@@ -94,7 +94,6 @@ def receive():
                     client.send(bot_message.encode('utf-8'))
                     print(bot_message)
                     used_words.append(word)
-                    break
                 elif BOT == "DerekBot":
                     print(word)
                     bot_message = '{}: {}'.format(BOT, derek(format(word)))
@@ -102,7 +101,6 @@ def receive():
                     client.send(bot_message.encode('utf-8'))
                     print(bot_message)
                     used_words.append(word)
-                    break
                 elif BOT == "PetronellaBot":
                     print(word)
                     bot_message = '{}: {}'.format(BOT, petronella(format(word)))
@@ -110,7 +108,6 @@ def receive():
                     client.send(bot_message.encode('utf-8'))
                     print(bot_message)
                     used_words.append(word)
-                    break
                 elif BOT == "JuanBot":
                     print(word)
                     bot_message = '{}: {}'.format(BOT, juan(format(word)))
@@ -118,7 +115,6 @@ def receive():
                     client.send(bot_message.encode('utf-8'))
                     print(bot_message)
                     used_words.append(word)
-                    break
                 else:
                     print("An error has occurred.")
                 break

@@ -17,6 +17,7 @@ are connected via the bot_client.py-file. This is possible when you connect the 
 The file called *bot.py* contains all the information which gives each bot its personality. This is imported
 in each of the other files.
 
+------
 ** INPUT PARAMETERS **
 All of the python-files have input parameters:
 - server.py
@@ -32,12 +33,16 @@ All of the python-files have input parameters:
     --> The input should be python [client.py] [HOST] [PORT] [BOT-NAME]
     --> The list of bots you can connect as is the following: AnnaBot, PetronellaBot, DerekBot, JuanBot
     --> For example python client.py 127.0.0.1 5050 AnnaBot
+----
 
 NB!
 The input parameters which concern host and port must be the same for server.py,
 client.py and bot_client.py.
 
 ** EXAMPLES OF CONVERSATION WITH BOT **
+You have the option to chat with the bot(s) as a connected client or via the server. You can connect
+multiple clients and disconnect whenever you feel like it. The words that the bots respond to are the
+same for the server-input and the client-input.
 
 A full list of all of the words the bots respond to:
 sayings = ["work", "play", "eat", "cry", "sleep", "fight", "hello", "Hey", "yo", "wind", "rain", "snow", "sunshine",

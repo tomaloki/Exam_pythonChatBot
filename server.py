@@ -1,14 +1,11 @@
 # -*- coding: utf-8 -*-
 
 import socket
-import threading
-import getpass
 import sys
 import re
 import select
 import ipaddress
 from bot import *
-from _thread import *
 import time
 import re
 
@@ -135,10 +132,6 @@ def receive():
                             broadcast(f"Me: Do you guys want to {format(word)}?".encode('utf-8'))
                             for client in clients:
                                 answer = client.recv(1024).decode("utf-8")
-                                if not answer:
-                                    print("Client has disconnected")
-                                    # answer = client.recv(1024).decode("utf-8")
-                                    # ot_client.sendall(answer.encode("utf-8"))
                                 for bot_client in clients:
                                     if bot_client == client:
                                         continue
