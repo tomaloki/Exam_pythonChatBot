@@ -74,7 +74,7 @@ def receive():
             if message == 'USER':
                 client.send(BOT.encode('utf-8'))
             else:
-                print(f"Received from server:-> {message}")
+                print(f"{message}")
 
         except:
             print("An error occurred!")
