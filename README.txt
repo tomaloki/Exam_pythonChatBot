@@ -62,5 +62,5 @@ can connect and the bots can also disconnect again.
 NB!
 While in the "talking-loop" with the bots, other clients can sign in - but they will not be accepted by the server
 until the "talking-loop" has ended.
-To notify: ff you choose to connect 4 ordinary client.py's, the loop in the server will start.
+To notify: if you choose to connect 4 ordinary client.py's, the loop in the server will start.
 

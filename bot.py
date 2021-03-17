@@ -60,7 +60,10 @@ def juan(a, b=None):
 def petronella(a, b=None):
     happy_thoughts = ["sunshine", "flowers", "butterflies", "ponies"]
     b = random.choice(happy_thoughts)
-    res = "Hm, okay I could do some {}ing. But I find myself only thinking of {}...".format(a, b)
+    if a in action:
+        res = "Hm, okay I could do some {}ing. But I find myself only thinking of {}...".format(a, b)
+    else:
+        res = "ZzZzZz...oh sorry, I fell asleep! What do you say now...{}?".format(a)
     return res
 
 
