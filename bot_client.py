@@ -87,29 +87,26 @@ def receive():
                     time.sleep(2)
                     client.send(bot_message.encode('utf-8'))
                     print(bot_message)
+                    break
                 if BOT == "AnnaBot":
-                    print(word)
                     bot_message = '{}: {}'.format(BOT, anna(format(word)))
                     time.sleep(3)
                     client.send(bot_message.encode('utf-8'))
                     print(bot_message)
                     used_words.append(word)
                 elif BOT == "DerekBot":
-                    print(word)
                     bot_message = '{}: {}'.format(BOT, derek(format(word)))
                     time.sleep(4)
                     client.send(bot_message.encode('utf-8'))
                     print(bot_message)
                     used_words.append(word)
                 elif BOT == "PetronellaBot":
-                    print(word)
                     bot_message = '{}: {}'.format(BOT, petronella(format(word)))
                     time.sleep(5)
                     client.send(bot_message.encode('utf-8'))
                     print(bot_message)
                     used_words.append(word)
                 elif BOT == "JuanBot":
-                    print(word)
                     bot_message = '{}: {}'.format(BOT, juan(format(word)))
                     time.sleep(6)
                     client.send(bot_message.encode('utf-8'))
@@ -120,5 +117,4 @@ def receive():
                 break
 
 
-receive_thread = threading.Thread(target=receive())
-# receive()
+receive()
