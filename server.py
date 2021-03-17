@@ -81,13 +81,13 @@ def receive():
     global count
     while True:
         read_socket, write_socket, exception_socket = select.select(client_connections, [], [])
-        # if connected_Socket in readable:  # new connection on the listening socket
+        # if connected_socket is in read_socket --> we have a new connection on the listening socket
         for notified_socket in read_socket:
             if notified_socket == connected_socket:
                 client_socket, client_address = connected_socket.accept()
                 print("Connected with {}".format(str(client_address)))
 
-                # Request nickname from connection and storing it
+                # Request nickname from connection and store it
                 client_socket.send('USER'.encode('utf-8'))
                 nickname = client_socket.recv(1024).decode('utf-8')
 

@@ -46,12 +46,12 @@ client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 client.connect((HOST, PORT))
 
 
-# Listening to server and sending nickname
+# Listening to the server
 def receive():
     while True:
         try:
             # Receive message from server
-            # if 'NICK' send nickname
+            # For received "USER"-request, send the username in return
             message = client.recv(1024).decode('utf-8')
             if message == 'USER':
                 client.send(nickname.encode('utf-8'))
@@ -75,7 +75,7 @@ def write():
             client.send(message)
 
 
-# Threads for receiving and wiritng messages to the server
+# Threads for receiving and writing messages to the server
 receive_thread = threading.Thread(target=receive)
 receive_thread.start()
 
