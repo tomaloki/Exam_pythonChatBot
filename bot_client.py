@@ -55,10 +55,6 @@ HOST = sys.argv[1]
 PORT = int(sys.argv[2])
 BOT = sys.argv[3]
 
-# Choose nickname
-botNames = ["Anna"]
-nickname = random.choice(botNames)
-
 # Connecting to server
 client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 client.connect((HOST, int(PORT)))
