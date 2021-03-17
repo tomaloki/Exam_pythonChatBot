@@ -7,8 +7,6 @@ import ipaddress
 from bot import *
 import re
 
-exit_commando = ["disconnect-server", "quit-server"]
-
 if len(sys.argv) == 2:
     arg = (sys.argv[1])
     arg = arg.lower()

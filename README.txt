@@ -47,6 +47,7 @@ same for the server-input and the client-input.
 A full list of all of the words the bots respond to:
 sayings = ["work", "play", "eat", "cry", "sleep", "fight", "hello", "Hey", "yo", "wind", "rain", "snow", "sunshine",
            "pretty", "kind", "beautiful", "intelligent", "wise", "name"]
+All of the bots might not respond to all of the words.
 
 
 It is advised to use one word at a time. The chosen word can be anywhere in the sentence you choose to send.

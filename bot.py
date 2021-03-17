@@ -34,9 +34,32 @@ def anna(a, b=None):
 
 
 def derek(a, b=None):
+    activity = ["work", "play", "eat", "cry", "sleep", "fight"]
+    greetings = ["Wazzup", "Long time no see", "Howdy"]
+    weather_response = [f"{a}, {a}, {a}... kinda sick of it.", f"{a} you say?"]
+    compliment_response = [f"I see what you're doing, calling me {a}!", "That's very sweet of you."]
+    name_response = ["I'm Derek!", "<-- That's my name!"]
+    action_response = [f"Not sure about {a}ing. Maybe another day...",
+                       f"My tummy hurts today, I don't wanna go {a}ing"]
     alternatives = ["coding", "singing", "sleeping", "fighting"]
     b = random.choice(alternatives)
-    res = "Yea, {}ing is an option. Or we could do some {}".format(a, b)
+    if a in greeting:
+        res = random.choice(greetings)
+        return res
+    elif a in activity:
+        res = random.choice(action_response)
+        return res
+    elif a in weather:
+        res = random.choice(weather_response)
+        return res
+    elif a in compliments:
+        res = random.choice(compliment_response)
+        return res
+    elif a in name:
+        res = random.choice(name_response)
+        return res
+    else:
+        res = "Yea, {}ing is an option. Or we could do some {}".format(a, b)
     return res
 
 
@@ -58,28 +81,29 @@ def juan(a, b=None):
 
 
 def petronella(a, b=None):
-    happy_thoughts = ["sunshine", "flowers", "butterflies", "ponies"]
+    happy_thoughts = ["flowers", "butterflies", "ponies", "ice-cream", "rollerblades"]
     b = random.choice(happy_thoughts)
     if a in action:
         res = "Hm, okay I could do some {}ing. But I find myself only thinking of {}...".format(a, b)
     else:
-        res = "ZzZzZz...oh sorry, I fell asleep! What do you say now...{}?".format(a)
+        res = "ZzZzZz...oh sorry, I fell asleep! What did you say now...{}?".format(a)
     return res
 
 
 def conversation(a, b=None):
     response = ["I told you about this earlier...", "*yawn* you keep asking about the same stuff...,"
                                                     "Ask me somethinge else, please", "You already asked "
-                                                                                      "about this!"]
+                                                                                      "about this!", "zZzZzZ..."]
     res = random.choice(response)
     return res
 
 
 action = random.choice(["work", "play", "eat", "cry", "sleep", "fight"])
-greeting = ["Hey", "hello", "yo"]
-weather = ["wind", "rain", "snow", "sunshine", "cloudy"]
-compliments = ["pretty", "kind", "beautiful", "intelligent", "wise"]
+greeting = ["Hey", "hello", "yo", "hey", "Hello"]
+weather = ["wind", "rain", "snow", "sunshine", "cloudy", "storm"]
+compliments = ["pretty", "kind", "beautiful", "intelligent", "wise", "strong", "inspiring"]
 
-sayings = ["work", "play", "eat", "cry", "sleep", "fight", "hello", "Hey", "yo", "wind", "rain", "snow", "sunshine",
-           "pretty", "kind", "beautiful", "intelligent", "wise", "name"]
+sayings = ["pretty", "kind", "beautiful", "intelligent", "wise", "strong", "inspiring", "wind", "rain",
+           "snow", "sunshine", "cloudy", "storm", "Hey", "hello", "yo", "hey", "Hello", "work", "play", "eat",
+           "cry", "sleep", "fight"]
 name = ["name"]
