@@ -60,7 +60,7 @@ client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 client.connect((HOST, int(PORT)))
 
 
-# Listening to server and sending nickname
+# Listening to the server
 def receive():
     while True:
         # Receive message from server
